@@ -62,7 +62,7 @@ def mae_loss(label,pred):
 
 aaaaa = []
 class PrintPredictionsCallback(Callback):
-    def __init__(self, input_data, save_path, scale = 5):
+    def __init__(self, input_data, save_path, scale = 5): # scale here is the λ in paper. It should be turned for different datasets. 5 is okay for most of datast in this paper
         super(PrintPredictionsCallback, self).__init__()
         self.x1 = input_data
         self.scale = scale
